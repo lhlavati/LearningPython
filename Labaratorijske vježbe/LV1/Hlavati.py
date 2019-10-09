@@ -65,3 +65,57 @@ def palindrome():
                 return print ("String is not a palindrome")
 
 palindrome()
+
+def rock_paper_scissors():
+        p1 = input("R\t|\tP\t|\tS")
+        p2 = input("R\t|\tP\t|\tS")
+        scorep1 = 0
+        scorep2 = 0
+        if p1 == "R" and p2 == "P":
+                print ("Player 2 wins!")
+                scorep2 += 1
+        elif p1 == "R" and p2 == "S":
+                print ("Player 1 wins!")
+                scorep1 += 1
+        elif p1 == "P" and p2 == "S":
+                print ("")                
+
+#ZADATAK 8
+def rock_paper_scissors():
+    scorep1 = 0
+    scorep2 = 0
+    while (scorep1 < 3 and scorep2 < 3):
+        p1 = input("Choose: R | P | S --> ")
+        p2 = input("Choose: R | P | S --> ")
+        if p1 == p2:
+            print ("It's a TIE!")
+        elif p1 == "R":
+            if p2 == "P":
+                scorep2 += 1
+                print ("Player 2 wins!\nP1 | P2\n" + str(scorep1) + "  | " + str(scorep2)) 
+            else:
+                scorep1 += 1
+                print ("Player 1 wins!\nP1 | P2\n" + str(scorep1) + "  | " + str(scorep2)) 
+        elif p1 == "P":
+            if p2 == "R":
+                scorep1 += 1
+                print ("Player 1 wins!\nP1 | P2\n" + str(scorep1) + "  | " + str(scorep2)) 
+            else:
+                scorep2 += 1
+                print ("Player 2 wins!\nP1 | P2\n" + str(scorep1) + "  | " + str(scorep2)) 
+        elif p1 == "S":
+            if p2 == "P":
+                scorep1 += 1
+                print ("Player 1 wins!\nP1 | P2\n" + str(scorep1) + "  | " + str(scorep2)) 
+            else:
+                scorep2 += 1
+                print ("Player 2 wins!\nP1 | P2\n" + str(scorep1) + "  | " + str(scorep2)) 
+        else:
+            print("Invalid input, Please try again!")
+            
+    if scorep1 > scorep2:
+        print ("Congratulations Player 1! You win!\nFinal score: \nP1 | P2\n" + str(scorep1) + "  | " + str(scorep2))
+    else:
+        print ("Congratulations Player 2! You win!\nFinal score: \nP1 | P2\n" + str(scorep1) + "  | " + str(scorep2))
+   
+rock_paper_scissors()
