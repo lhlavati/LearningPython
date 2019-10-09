@@ -117,5 +117,15 @@ def rock_paper_scissors():
         print ("Congratulations Player 1! You win!\nFinal score: \nP1 | P2\n" + str(scorep1) + "  | " + str(scorep2))
     else:
         print ("Congratulations Player 2! You win!\nFinal score: \nP1 | P2\n" + str(scorep1) + "  | " + str(scorep2))
-   
+        
+    newgame = input("\nDo you want to play a new game? Y/N --> ")
+    
+    while newgame != "Y" and newgame != "N":
+        newgame = input("Invalid input! Please use Y or N --> ")
+    
+    if newgame == "Y":
+        rock_paper_scissors()
+    else:
+        print ("Thanks for playing!")
+    
 rock_paper_scissors()
